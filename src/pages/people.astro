@@ -1,0 +1,48 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="People" description="The evolutionaryABM research team." />
+    <style>
+      main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+      h1 { font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 1.5rem; }
+      .people-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+      .person-card { border: 1px solid #eee; border-radius: 12px; padding: 1.25rem; text-align: center; background: #fff; }
+      .avatar { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin: 0 auto 0.75rem; }
+      .person-card h2 { font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 3px; }
+      .role { font-size: 12px; color: #888; }
+      .affil { font-size: 11px; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #f0f0f0; }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>People</h1>
+      <div class="people-grid">
+        <div class="person-card">
+          <div class="avatar" style="background:#e1f5ee;color:#0f6e56;">KY</div>
+          <h2>Kai-Yin</h2>
+          <div class="role">Principal Investigator</div>
+          <div class="affil">Purdue University</div>
+        </div>
+        <div class="person-card">
+          <div class="avatar" style="background:#eeedfe;color:#3c3489;">+</div>
+          <h2>Collaborators</h2>
+          <div class="role">Add team members here</div>
+          <div class="affil">Institution · Role</div>
+        </div>
+        <div class="person-card">
+          <div class="avatar" style="background:#faeeda;color:#633806;">+</div>
+          <h2>Graduate students</h2>
+          <div class="role">Add students here</div>
+          <div class="affil">Institution · Year</div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

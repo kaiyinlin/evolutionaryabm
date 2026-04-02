@@ -1,0 +1,44 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="RESET — Ecology and Conservation" description="Ecosystem resilience and conservation using evolutionary ABM." />
+    <style>
+      main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+      .back { font-size: 13px; color: #888; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 1.5rem; }
+      .back:hover { color: #111; }
+      .proj-tag { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; display: inline-block; margin-bottom: 0.75rem; text-transform: uppercase; background: #faeeda; color: #633806; }
+      h1 { font-size: 1.7rem; font-weight: 700; color: #111; margin-bottom: 0.75rem; line-height: 1.3; }
+      .lead { font-size: 1rem; color: #555; line-height: 1.75; max-width: 620px; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee; }
+      .section { margin-bottom: 2rem; }
+      .section h2 { font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.6rem; }
+      .section p { font-size: 0.9rem; color: #555; line-height: 1.75; }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <a href="/projects" class="back">← Back to projects</a>
+      <span class="proj-tag">Ecology</span>
+      <h1>RESET — Ecology and conservation</h1>
+      <p class="lead">Studying ecosystem resilience, tipping points, and conservation interventions using evolutionary agent-based models of predator-prey and species interaction networks.</p>
+      <div class="section">
+        <h2>Research questions</h2>
+        <p>Where are the tipping points in adaptive predator-prey systems? Can targeted interventions restore collapsed ecosystems in simulation?</p>
+      </div>
+      <div class="section">
+        <h2>Methods</h2>
+        <p>Multi-species ABM on heterogeneous landscapes. Disturbance scenarios and recovery pathway analysis across environmental parameter gradients.</p>
+      </div>
+      <div class="section">
+        <h2>Status</h2>
+        <p>Active — working paper in progress.</p>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,75 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="Projects" description="All research projects at evolutionaryABM." />
+    <style>
+      main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+      .section-header { margin-bottom: 1.5rem; }
+      .section-header h1 { font-size: 1.5rem; font-weight: 700; color: #111; }
+      .section-header p { font-size: 0.85rem; color: #888; margin-top: 4px; }
+      .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+      .proj-card { border: 1px solid #eee; border-radius: 12px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color 0.15s, box-shadow 0.15s; background: #fff; }
+      .proj-card:hover { border-color: #ccc; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+      .proj-tag { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; display: inline-block; margin-bottom: 0.75rem; text-transform: uppercase; }
+      .tag-teal { background: #e1f5ee; color: #0f6e56; }
+      .tag-purple { background: #eeedfe; color: #3c3489; }
+      .tag-blue { background: #e6f1fb; color: #0c447c; }
+      .tag-amber { background: #faeeda; color: #633806; }
+      .tag-coral { background: #faece7; color: #712b13; }
+      .proj-card h3 { font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.5rem; line-height: 1.4; }
+      .proj-card p { font-size: 0.82rem; color: #666; line-height: 1.6; margin: 0; }
+      .proj-card-footer { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center; }
+      .proj-status { font-size: 11px; color: #888; display: flex; align-items: center; gap: 5px; }
+      .proj-status::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #1d9e75; }
+      .sub-count { font-size: 10px; color: #aaa; margin-bottom: 4px; }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="section-header">
+        <h1>Projects</h1>
+        <p>Five research areas, seven active projects</p>
+      </div>
+      <div class="projects-grid">
+        <a href="/projects/evolution-cooperation" class="proj-card">
+          <span class="proj-tag tag-teal">Biology · Game theory</span>
+          <div class="sub-count">3 projects</div>
+          <h3>Evolution of cooperation and fairness</h3>
+          <p>How cooperative behaviors evolve when selfish strategies seem to dominate.</p>
+          <div class="proj-card-footer"><span class="proj-status">Active</span><span>→</span></div>
+        </a>
+        <a href="/projects/live-longer" class="proj-card">
+          <span class="proj-tag tag-purple">Systems biology</span>
+          <h3>Live Longer</h3>
+          <p>Modeling aging and longevity as emergent properties of cellular interaction networks.</p>
+          <div class="proj-card-footer"><span class="proj-status">Active</span><span>→</span></div>
+        </a>
+        <a href="/projects/cells" class="proj-card">
+          <span class="proj-tag tag-blue">Computational biology</span>
+          <h3>Cells</h3>
+          <p>How tissue-level patterns emerge from cell-level rules of division and signaling.</p>
+          <div class="proj-card-footer"><span class="proj-status">Active</span><span>→</span></div>
+        </a>
+        <a href="/projects/reset" class="proj-card">
+          <span class="proj-tag tag-amber">Ecology</span>
+          <h3>RESET — Ecology and conservation</h3>
+          <p>Ecosystem resilience, tipping points, and conservation using evolutionary ABM.</p>
+          <div class="proj-card-footer"><span class="proj-status">Active</span><span>→</span></div>
+        </a>
+        <a href="/projects/security" class="proj-card">
+          <span class="proj-tag tag-coral">Political science</span>
+          <h3>Security cooperation and burden sharing</h3>
+          <p>Modeling alliance dynamics and why some members consistently under-contribute.</p>
+          <div class="proj-card-footer"><span class="proj-status">Active</span><span>→</span></div>
+        </a>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
